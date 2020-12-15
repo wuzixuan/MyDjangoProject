@@ -79,11 +79,14 @@ WSGI_APPLICATION = 'webproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': '/project1/to/my.cnf',
-        },
+        'NAME': 'mytest',
+        'USER': 'root',
+        'PASSWORD': 'wzx19950913',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
+
 
 
 
