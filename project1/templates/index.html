@@ -1,0 +1,9 @@
+{% if latest_question_list %}
+    <ul>
+    {% for person in latest_question_list %}
+        <li><a href="/project1/{{ person.id }}/">{{ person.first_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Person are available.</p>
+{% endif %}

@@ -1,3 +1,44 @@
 1.配置model后执行一下命令：
 manage.py makemigrations
 manage.py migrate
+
+
+2.进入django命令行
+manage.py shell
+
+3.测试models
+manage.py shell
+from project1.models import Person
+p = Person()
+p.first_name = 'wu'
+p.last_name = 'zixuan'
+p.save
+
+4.创建管理员
+manage.py createsuperuser
+
+(webenv) D:\code\python\webproject>manage.py createsuperuser
+用户名 (leave blank to use 'wuzixuan'):
+电子邮件地址: 592319205@qq.com
+Password:wzx19950913
+Password (again):wzx19950913
+Superuser created successfully.
+
+5.启动服务
+manage.py runserver
+访问管理页面：http://127.0.0.1:8000/admin/
+
+
+6.修改数据库为mysql
+在主项目下的setting.py中，修改DATABASES为：
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mytest',
+        'USER': 'root',
+        'PASSWORD': 'wzx19950913',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
