@@ -8,7 +8,7 @@ from .models import Person
 
 def index(request):
     latest_question_list = Person.objects.order_by('id')[:5]
-    template = loader.get_template('index.html')
+    template = loader.get_template('fation.html')
     context = {
         'latest_question_list': latest_question_list,
     }
