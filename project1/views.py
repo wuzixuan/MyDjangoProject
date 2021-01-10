@@ -2,16 +2,18 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
-from django.template import loader
+from django.template import loader,RequestContext
 from .models import Person
 
 
 def index(request):
-    latest_question_list = Person.objects.order_by('id')[:5]
+
+    # 1、加载模板文件
     template = loader.get_template('fation.html')
-    context = {
-        'latest_question_list': latest_question_list,
-    }
+    # 2、获取上下文
+    # context = RequestContext(request,{ })
+    context = {}
+    #3、render渲染模板
     return HttpResponse(template.render(context, request))
 
 def index1(request):
@@ -36,3 +38,5 @@ def results(request, question_id):
 
 def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
+
+

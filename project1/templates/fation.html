@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
+{% load static %}
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>wuzixuan的个人网站</title>
-    <link href="http://hovertree.com/texiao/html5/index/hovertreewelcome.css" type="text/css" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/hovertreewelcome.css' %}">
+    <script type="text/javascript" src="{% static 'js/hovertreewelcome.js' %}"></script>
 </head>
 <body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false"
       onselectstart="event.returnValue=false">
@@ -13,10 +18,6 @@
     <div>
         <h1 id="h1">wuzixuan </h1>
         <h2 id="h2"> </h2>
-        <h3 id="h2"><a href="http://hovertree.com/hvtart/bjae/onxw4ahp.htm"></a>
-            <a href="http://hovertree.com/texiao/"></a></h3>
-        <p> </p>
-        <p><strong><a href="http://hovertree.com/"></a></strong></p>
         <p> </p>
         <p> </p>
         <p> </p>
@@ -28,8 +29,8 @@
 
 <canvas id="canvas"></canvas>
 
-<script type="text/javascript" src="http://hovertree.com/texiao/html5/index/hovertreewelcome.js">
-</script>
+
+
 <script type="text/javascript">
 
     ;(function (window) {

@@ -42,3 +42,17 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+
+7.配置静态文件
+根setting中添加：
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(str(BASE_DIR) + "static")]
+
+在project1项目中创建static目录，并在该目录下创建css、js等文件夹，放入css、js文件
+
+html中加载静态文件：
+头前：
+{% load static %}
+头中：
+<link rel="stylesheet" type="text/css" href="{% static 'css/hovertreewelcome.css' %}">
+<script type="text/javascript" src="{% static 'js/hovertreewelcome.js' %}"></script>
