@@ -1,10 +1,106 @@
-{% if latest_question_list %}
-    <ul>
-    {% for person in latest_question_list %}
-        <li><a href="/project1/{{ person.id }}/">{{ person.first_name }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No Person are available.</p>
-{% endif %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
+{% load static %}
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>wuzixuan的个人网站</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</head>
+<body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false"
+      onselectstart="event.returnValue=false">
+
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <form class="form-search">
+                <input class="input-medium search-query" type="text"/>
+                <button type="submit" class="btn">查找</button>
+            </form>
+            <h3>
+                h3. 这是一套可视化布局系统.
+            </h3>
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                    列表标题
+                </li>
+                <li class="active">
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="#">库</a>
+                </li>
+                <li>
+                    <a href="#">应用</a>
+                </li>
+                <li class="nav-header">
+                    功能列表
+                </li>
+                <li>
+                    <a href="#">资料</a>
+                </li>
+                <li>
+                    <a href="#">设置</a>
+                </li>
+                <li class="divider">
+                </li>
+                <li>
+                    <a href="#">帮助</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2">
+            <div class="hero-unit">
+                <h3>
+                    Hello, world!
+                </h3>
+                <p>
+                    这是一个可视化布局模板, 你可以点击模板里的文字进行修改, 也可以通过点击弹出的编辑框进行富文本修改. 拖动区块能实现排序.
+                </p>
+                <p>
+                    <a class="btn btn-primary btn-large" href="#">参看更多 »</a>
+                </p>
+            </div>
+        </div>
+        <div class="span6">
+            <img alt="140x140" src="img/a.jpg"/>
+            <ul>
+                <li>
+                    新闻资讯
+                </li>
+                <li>
+                    体育竞技
+                </li>
+                <li>
+                    娱乐八卦
+                </li>
+                <li>
+                    前沿科技
+                </li>
+                <li>
+                    环球财经
+                </li>
+                <li>
+                    天气预报
+                </li>
+                <li>
+                    房产家居
+                </li>
+                <li>
+                    网络游戏
+                </li>
+            </ul>
+        </div>
+        <div class="span4">
+            <img alt="140x140" src="img/a.jpg" class="img"/>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

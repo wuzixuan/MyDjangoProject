@@ -9,7 +9,7 @@ from .models import Person
 def index(request):
 
     # 1、加载模板文件
-    template = loader.get_template('fation.html')
+    template = loader.get_template('index.html')
     # 2、获取上下文
     # context = RequestContext(request,{ })
     context = {}

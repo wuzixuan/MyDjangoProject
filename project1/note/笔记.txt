@@ -56,3 +56,8 @@ html中加载静态文件：
 头中：
 <link rel="stylesheet" type="text/css" href="{% static 'css/hovertreewelcome.css' %}">
 <script type="text/javascript" src="{% static 'js/hovertreewelcome.js' %}"></script>
+
+
+
+9.Bootstrap可视化布局系统：
+https://www.bootcss.com/p/layoutit/#
